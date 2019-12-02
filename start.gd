@@ -7,7 +7,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# connect button to main
-	$Button.connect("pressed", get_parent(), "_on_Button_pressed")
+	$Button.connect("pressed", get_parent(), "_on_level1_pressed")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

@@ -1,10 +1,65 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Control" type="Control"]
+[ext_resource path="res://vecna.tres" type="DynamicFont" id=1]
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="Cards" type="HBoxContainer" parent="."]
+margin_left = 50.0
+margin_right = 161.0
+margin_bottom = 44.0
+
+[node name="Cards" type="Label" parent="Cards"]
+margin_right = 102.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 1 )
+text = "Cards:"
+
+[node name="CardsValue" type="Label" parent="Cards"]
+margin_left = 106.0
+margin_right = 161.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 1 )
+text = "0/3"
+
+[node name="Damage" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -80.5
+margin_right = 80.5
+margin_bottom = 44.0
+grow_horizontal = 2
+
+[node name="Damage" type="Label" parent="Damage"]
+margin_right = 139.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 1 )
+text = "Damage: "
+
+[node name="DamageValue" type="Label" parent="Damage"]
+margin_left = 143.0
+margin_right = 161.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+
+[node name="Defence" type="HBoxContainer" parent="."]
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
+margin_left = -193.0
+margin_bottom = 44.0
+grow_horizontal = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Defence" type="Label" parent="Defence"]
+margin_right = 121.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 1 )
+text = "Block: "
+
+[node name="DefenceValue" type="Label" parent="Defence"]
+margin_left = 125.0
+margin_right = 143.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
 
