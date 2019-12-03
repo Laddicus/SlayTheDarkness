@@ -18,7 +18,6 @@ func _ready():
 
 
 func _on_enemy_mouse_entered():
-	print("Targeting enemy")
 	get_node("Particles2D").emitting = true
 	
 

@@ -26,7 +26,6 @@ func _on_new_turn():
 	get_node("Particles2D").emitting = selected
 
 func _rand_damage():
-	print("AAH")
 	damage = int(rand_range(-10,20))
 	$damage.set_text(str(damage))
 
@@ -44,6 +43,5 @@ func _on_wizardCard_input_event(viewport, event, shape_idx):
 					selected = true
 			else:
 				selected = false
-				print("Deselected")
 				emit_signal("_on_Card_Deselected",damage)
 			get_node("Particles2D").emitting = selected

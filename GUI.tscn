@@ -17,10 +17,10 @@ text = "Cards:"
 
 [node name="CardsValue" type="Label" parent="Cards"]
 margin_left = 106.0
-margin_right = 161.0
+margin_right = 163.0
 margin_bottom = 44.0
 custom_fonts/font = ExtResource( 1 )
-text = "0/3"
+text = "0/4"
 
 [node name="Damage" type="HBoxContainer" parent="."]
 anchor_left = 0.5

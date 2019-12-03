@@ -32,7 +32,7 @@ var Cards
 var maxCards = 4
 
 var enemyDamage
-var damageDealt
+var damageDealt = 0
 var totalDamageDealt = 0
 
 signal newTurn
@@ -51,7 +51,9 @@ func _ready():
 	#Load cards
 	card_resource = load("res://wizardCard.tscn")
 	
+	current = get_node("start")
 	
+	randomize()
 	
 	pass
 
@@ -178,8 +180,6 @@ func _on_New_Turn():
 			var deadGuy = players.find(target)
 			players.remove(deadGuy)
 			target = null
-			print(deadGuy)
-			print(players)
 		
 	if maxCards == 0:
 		var next_resource = load("res://end.tscn")
@@ -209,7 +209,6 @@ func _on_New_Turn():
 		get_node("level/enemy/damage").set_text(str(abs(enemyDamage))+" block")
 	
 func _on_Card_Selected(damage):
-	print(damage)
 	# Change UI to show that you selected x/3 cards
 	# Negative damage goes to block variable
 	# Positive value goes to attack variable

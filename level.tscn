@@ -68,6 +68,7 @@ script = ExtResource( 1 )
 [node name="wham" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 740, 69 )
 stream = ExtResource( 2 )
+volume_db = -20.194
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
