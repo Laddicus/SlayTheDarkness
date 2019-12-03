@@ -27,7 +27,7 @@ func _on_new_turn():
 
 func _rand_damage():
 	print("AAH")
-	damage = int(rand_range(-20,20))
+	damage = int(rand_range(-10,20))
 	$damage.set_text(str(damage))
 
 func _on_wizardCard_input_event(viewport, event, shape_idx):

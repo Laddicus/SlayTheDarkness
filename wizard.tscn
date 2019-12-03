@@ -1,25 +1,25 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
-[ext_resource path="res://art/players/ash.png" type="Texture" id=2]
-[ext_resource path="res://art/players/Players_Wizard_0.png" type="Texture" id=3]
-[ext_resource path="res://art/players/Players_Wizard_1.png" type="Texture" id=4]
-[ext_resource path="res://art/players/Players_Wizard_2.png" type="Texture" id=5]
-[ext_resource path="res://art/players/Players_Wizard_3.png" type="Texture" id=6]
+[ext_resource path="res://art/players/Players_Wizard_0.png" type="Texture" id=2]
+[ext_resource path="res://art/players/Players_Wizard_1.png" type="Texture" id=3]
+[ext_resource path="res://art/players/Players_Wizard_2.png" type="Texture" id=4]
+[ext_resource path="res://art/players/Players_Wizard_3.png" type="Texture" id=5]
+[ext_resource path="res://art/players/ash.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 98.8469, 95.7313 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "ash",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "wizard",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "ash",
 "speed": 5.0
 } ]
 
@@ -34,7 +34,7 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "wizard"
-frame = 3
+frame = 2
 playing = true
 
 [node name="health" type="ProgressBar" parent="."]
@@ -47,5 +47,4 @@ custom_colors/font_color = Color( 0.917647, 0.92549, 0.0666667, 1 )
 custom_colors/font_color_shadow = Color( 0.666667, 0.529412, 0.0509804, 1 )
 step = 1.0
 value = 100.0
-
 [connection signal="mouse_entered" from="." to="." method="_on_player_mouse_entered"]

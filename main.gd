@@ -138,7 +138,7 @@ func _on_level1_pressed():
 	get_node("level").add_child(card6)
 	card6.position = Vector2(cardLoc[5],cardY)
 	
-	enemyDamage = int(rand_range(-50, 50))
+	enemyDamage = int(rand_range(-35, 100))
 	if enemyDamage > 0:
 		target = players[int(rand_range(0,4))]
 		get_node("level/enemy/damage").set_text(str(enemyDamage)+" damage on "+target)

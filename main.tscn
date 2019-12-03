@@ -14,4 +14,3 @@ position = Vector2( 512, 0 )
 stream = ExtResource( 3 )
 volume_db = -13.126
 autoplay = true
-
